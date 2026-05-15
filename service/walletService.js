@@ -4,8 +4,8 @@ import sequelize from "../config/db.js";
 export const createUser = async (name, email) => {
     const [exist] = await sequelize.query(`select id from users where email = ?`, {replacements: [email]});
     if (exist.length) throw new Error("Email already exist");
-    const [result] = await sequelize.query(`insert into users (name, email) values (?,?)`, {replacements: [name, email]});
-    const userId = result.insertId;
+    const [_, result] = await sequelize.query(`insert into users (name, email) values (?,?)`, {replacements: [name, email]});
+    const userId = result;
     await sequelize.query('insert into wallets (user_id) values (?)', {replacements: [userId]});
     return {id: userId, name, email}
 };
