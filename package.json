@@ -1,0 +1,28 @@
+{
+  "name": "cognitivenest-test",
+  "version": "1.0.0",
+  "description": "Build a backend service that supports wallet operations and money transfers between users.",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "dev":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pooran-singh26/cognitivenest-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pooran-singh26/cognitivenest-test/issues"
+  },
+  "homepage": "https://github.com/pooran-singh26/cognitivenest-test#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.37.8"
+  }
+}
